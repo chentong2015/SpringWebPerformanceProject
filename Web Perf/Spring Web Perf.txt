@@ -1,0 +1,8 @@
+Spring Web Perf 实战项目测试
+1. 后端使用Async异步线程处理请求
+2. 后端使用Pageable分页返回数据
+3. 后端将数据压缩返回
+4. 后端使用Streaming流式数据返回
+5. PULL PUSH 技术
+6. 后端异步推动技术
+7. MQ 异步消息推送
