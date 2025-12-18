@@ -1,0 +1,18 @@
+TODO. 未采用任何压缩
+Response Header:
+  connection  keep-alive
+  content-length 30720
+  content-type text/html;charset=UTF-8
+  keep-alive timeout=60
+
+TODO. 激活服务端的数据压缩
+计算返回的结果的长度可能造成Server性能问题
+Response Header:
+  connection keep-alive
+  content-encoding gzip
+  content-type text/html;charset=UTF-8
+  keep-alive timeout=60
+  transfer-encoding chunked
+
+HTTP/1.1标准行为: 响应体是流式压缩, 压缩大小只有在写完流之后才知道
+开启压缩后默认不会再主动设置Content-Length, 而改用Transfer-Encoding: chunked

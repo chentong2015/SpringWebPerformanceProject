@@ -12,9 +12,8 @@
     <modules>
         <module>async-task</module>
         <module>gzip-compression</module>
-        <module>sse-push</module>
         <module>response-pageable</module>
-        <module>response-streaming</module>
+        <module>sse-push</module>
     </modules>
 
     <properties>
