@@ -1,0 +1,8 @@
+TODO. 分页优化
+1. 如果需要显示"共N条记录"总数: 异步执行Count统计，避免重复执行
+   select count(id)
+
+2. 偏移量很大会导致查询性能下降: 避免使用偏移，记录上次查询的最大ID
+   where id > ?
+   order by id
+   fetch first ? rows only
