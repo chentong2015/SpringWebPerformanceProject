@@ -1,13 +1,18 @@
 package org.example.controller;
 
+import org.example.entity.BatchEntity;
 import org.example.service.BatchPageableService;
+import org.springframework.data.domain.Page;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class BatchPageableController {
 
-    private BatchPageableService batchPageableService;
+    private final BatchPageableService batchPageableService;
 
     public BatchPageableController(BatchPageableService batchPageableService) {
         this.batchPageableService = batchPageableService;
@@ -17,5 +22,11 @@ public class BatchPageableController {
     public String initBatches() {
         this.batchPageableService.initBatches();
         return "Init Batches successfully";
+    }
+
+    @GetMapping("/page/batches")
+    public ResponseEntity<List<BatchEntity>> getPageableBatches() {
+        Page<BatchEntity> batchEntityPage = this.batchPageableService.getPageableBatches();
+        return ResponseEntity.ok().body(batchEntityPage.getContent());
     }
 }

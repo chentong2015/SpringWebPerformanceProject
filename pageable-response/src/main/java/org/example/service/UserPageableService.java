@@ -30,7 +30,7 @@ public class UserPageableService {
     // 默认根据Pageable参数值查询分页数据
     public Page<UserEntity> findAllUsers(Pageable pageable) {
         Page<UserEntity> users = this.repository.findAll(pageable);
-        if (!users.isEmpty()) {
+        if (users.hasContent()) {
             return users;
         }
         // 自定义分页查询结果，提供total查询总数
