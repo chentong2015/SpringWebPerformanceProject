@@ -4,6 +4,7 @@ import org.example.entity.UserEntity;
 import org.example.service.UserPageableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -30,10 +31,17 @@ public class UserPageableController {
     }
 
     // TODO. 定义PageableDefault默认分页查询参数
-    @GetMapping("/list/users")
+    // page = 2 返回第几页的数据
+    // size = 20 每页的数据大小
+    // sort = {"id"} 查询时的排序字段
+    // direction = Sort.Direction.ASC 排序顺序
+    @GetMapping("/page/users")
     public ResponseEntity<List<UserEntity>> findAllByNameAndEmail(
             @PageableDefault(page = 2, size = 20, sort = {"id"}, direction = Sort.Direction.ASC) Pageable pageable) {
         Page<UserEntity> userEntities = this.userPageableService.findAllUsers(pageable);
+
+        System.out.println(userEntities.getTotalPages());
+        System.out.println(userEntities.getTotalElements());
         return ResponseEntity.ok().body(userEntities.getContent());
     }
 }

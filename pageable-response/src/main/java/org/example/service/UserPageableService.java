@@ -27,13 +27,14 @@ public class UserPageableService {
         }
     }
 
-    // 自定义查询返回的Page分页空结果
+    // 默认根据Pageable参数值查询分页数据
     public Page<UserEntity> findAllUsers(Pageable pageable) {
         Page<UserEntity> users = this.repository.findAll(pageable);
-        if (users.isEmpty()) {
-            return new PageImpl<>(Collections.emptyList(), pageable, 0);
+        if (!users.isEmpty()) {
+            return users;
         }
-        return users;
+        // 自定义分页查询结果，提供total查询总数
+        return new PageImpl<>(Collections.emptyList(), pageable, 0);
     }
 
     public Page<UserEntity> findAllByNameAndEmail(Pageable pageable) {
