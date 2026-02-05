@@ -1,6 +1,6 @@
-package org.example.repo;
+package pageable.org.example.repository;
 
-import org.example.entity.UserEntity;
+import pageable.org.example.entity.UserEntity;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 

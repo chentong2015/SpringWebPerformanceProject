@@ -1,8 +1,8 @@
-package org.example.controller;
+package pageable.org.example.controller;
 
-import org.example.entity.UserEntity;
-import org.example.service.UserPageableService;
-import org.example.util.PaginationHeaderHelper;
+import pageable.org.example.entity.UserEntity;
+import pageable.org.example.service.UserPageableService;
+import pageable.util.PaginationHeaderHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,0 +1,3 @@
+TODO. 通过并发Count查询优化性能问题
+1. 使用JPA EntityManager并发执行数据查询和Count统计
+2. 并发执行Repository的不同分页查询语句

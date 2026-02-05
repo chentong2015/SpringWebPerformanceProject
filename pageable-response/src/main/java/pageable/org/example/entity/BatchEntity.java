@@ -1,4 +1,4 @@
-package org.example.entity;
+package pageable.org.example.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

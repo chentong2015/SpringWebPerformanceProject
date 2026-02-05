@@ -1,4 +1,4 @@
-package org.example.util;
+package pageable.util;
 
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpHeaders;

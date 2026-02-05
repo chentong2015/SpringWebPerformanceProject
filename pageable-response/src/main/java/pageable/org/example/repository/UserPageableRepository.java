@@ -1,6 +1,6 @@
-package org.example.repo;
+package pageable.org.example.repository;
 
-import org.example.entity.UserEntity;
+import pageable.org.example.entity.UserEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserPageableRepository extends CrudRepository<UserEntity, Long> {
 
-    // TODO. Data JPA自动为分页查询生成数据和Count两个查询 -> 并发性能优化
+    // TODO. Data JPA自动为分页查询生成数据和Count两个查询
     // Hibernate: select ue1_0.id,ue1_0.email,ue1_0.name from t_users ue1_0 order by ue1_0.id offset ? rows fetch first ? rows only
     // Hibernate: select count(ue1_0.id) from t_users ue1_0
     Page<UserEntity> findAll(Pageable pageable);

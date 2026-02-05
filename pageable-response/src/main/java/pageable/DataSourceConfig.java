@@ -1,4 +1,4 @@
-package org.example;
+package pageable;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

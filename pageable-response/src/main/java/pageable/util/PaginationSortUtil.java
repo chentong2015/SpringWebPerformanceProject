@@ -1,4 +1,4 @@
-package org.example.util;
+package pageable.util;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;

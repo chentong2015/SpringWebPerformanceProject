@@ -1,7 +1,7 @@
-package org.example.service;
+package pageable.org.example.service;
 
-import org.example.entity.UserEntity;
-import org.example.repo.UserPageableRepository;
+import pageable.org.example.entity.UserEntity;
+import pageable.org.example.repository.UserPageableRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
