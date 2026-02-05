@@ -1,4 +1,4 @@
-package pageable.org.example.entity;
+package pageable.example.entity;
 
 import jakarta.persistence.*;
 

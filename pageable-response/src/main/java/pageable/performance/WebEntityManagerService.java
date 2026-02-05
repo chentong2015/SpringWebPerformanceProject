@@ -2,7 +2,7 @@ package pageable.performance;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
-import pageable.org.example.entity.UserEntity;
+import pageable.example.entity.UserEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;

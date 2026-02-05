@@ -1,7 +1,7 @@
 package pageable.performance;
 
 import java.util.List;
-import pageable.org.example.entity.UserEntity;
+import pageable.example.entity.UserEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;

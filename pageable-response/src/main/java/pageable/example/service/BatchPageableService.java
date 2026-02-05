@@ -1,7 +1,7 @@
-package pageable.org.example.service;
+package pageable.example.service;
 
-import pageable.org.example.entity.BatchEntity;
-import pageable.org.example.repository.BatchPageableRepository;
+import pageable.example.entity.BatchEntity;
+import pageable.example.repository.BatchPageableRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

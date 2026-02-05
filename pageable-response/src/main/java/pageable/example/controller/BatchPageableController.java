@@ -1,7 +1,7 @@
-package pageable.org.example.controller;
+package pageable.example.controller;
 
-import pageable.org.example.entity.BatchEntity;
-import pageable.org.example.service.BatchPageableService;
+import pageable.example.entity.BatchEntity;
+import pageable.example.service.BatchPageableService;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

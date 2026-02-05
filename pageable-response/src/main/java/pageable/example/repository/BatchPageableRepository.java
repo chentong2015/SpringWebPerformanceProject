@@ -1,6 +1,6 @@
-package pageable.org.example.repository;
+package pageable.example.repository;
 
-import pageable.org.example.entity.BatchEntity;
+import pageable.example.entity.BatchEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
